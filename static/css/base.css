@@ -1,0 +1,213 @@
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 13px PingFangSC-Medium, PingFang SC;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+    color: #313131;
+}
+
+a {
+    color: #2d374b;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #cd0200;
+    text-decoration: underline;
+}
+
+em {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: none;
+}
+
+input:-webkit-autofill {
+    background-color: transparent !important;
+    background-image: none !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+@keyframes bounceIn {
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+.bounceIn {
+    animation-duration: 0.75s;
+    animation-name: bounceIn;
+}
+
+.delay0 {
+    animation-delay: 0s;
+}
+
+.delay1 {
+    animation-delay: 0.05s;
+}
+
+.delay2 {
+    animation-delay: 0.1s;
+}
+
+.delay3 {
+    animation-delay: 0.15s;
+}
+
+.delay4 {
+    animation-delay: 0.2s;
+}
+
+.delay5 {
+    animation-delay: 0.25s;
+}
+
+.delay6 {
+    animation-delay: 0.3s;
+}
+
+.delay7 {
+    animation-delay: 0.35s;
+}
+
+.delay8 {
+    animation-delay: 0.4s;
+}
+
+.delay9 {
+    animation-delay: 0.45s;
+}
+
+.delay10 {
+    animation-delay: 0.5s;
+}
+
+.delay11 {
+    animation-delay: 0.55s;
+}
+
+.delay12 {
+    animation-delay: 0.6s;
+}
+
+.delay13 {
+    animation-delay: 0.65s;
+}
+
+.delay14 {
+    animation-delay: 0.7s;
+}
+
+.delay15 {
+    animation-delay: 0.75s;
+}
+
+.delay16 {
+    animation-delay: 0.8s;
+}
+
+.delay17 {
+    animation-delay: 0.85s;
+}
+
+.delay18 {
+    animation-delay: 0.9s;
+}
+
+.delay19 {
+    animation-delay: 0.95s;
+}
+
+.delay20 {
+    animation-delay: 1s;
+}
+
+.delay21 {
+    animation-delay: 1.05s;
+}
+
+.clearfix:before {
+    display: flex;
+    content: "";
+    clear: both;
+}
+
+.clearfix:after {
+    display: flex;
+    content: "";
+    clear: both;
+}

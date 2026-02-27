@@ -1,0 +1,526 @@
+.open-num[data-v-645193fa] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start
+}
+
+.open-num.min li[data-v-645193fa] {
+    width: .56rem;
+    height: .56rem;
+    line-height: .56rem;
+    border-radius: .053333rem;
+    font-weight: 700;
+    font-size: .346667rem
+}
+
+.open-num li[data-v-645193fa] {
+    width: .586667rem;
+    height: .586667rem;
+    margin-right: .053333rem;
+    text-align: center;
+    line-height: .586667rem;
+    color: #fff;
+    border-radius: .053333rem;
+    text-shadow: 0 .026667rem #000, .026667rem 0 #000, -.026667rem 0 #000, 0 -.026667rem #000;
+    font-weight: 700;
+    font-size: .346667rem
+}
+
+.open-num[data-v-22faa2f7] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 0 .213333rem
+}
+
+.open-num.min li[data-v-22faa2f7] {
+    width: .506667rem !important;
+    height: .506667rem !important;
+    line-height: .506667rem !important;
+    font-size: .346667rem
+}
+
+.open-num li[data-v-22faa2f7] {
+    display: block;
+    width: .533333rem;
+    height: .533333rem;
+    margin-right: .213333rem;
+    text-align: center;
+    line-height: .533333rem;
+    border-radius: 50%;
+    border: .08rem solid;
+    color: #222;
+    font-weight: 700;
+    background: #fff;
+    font-size: .373333rem
+}
+
+.open-num li[data-v-22faa2f7]:last-child {
+    margin-right: 0
+}
+
+.open-num .ball-0[data-v-22faa2f7] {
+    border-color: #c1ec56
+}
+
+.open-num .ball-1[data-v-22faa2f7] {
+    border-color: #ffc219
+}
+
+.open-num .ball-2[data-v-22faa2f7] {
+    border-color: #3078e3
+}
+
+.open-num .ball-3[data-v-22faa2f7] {
+    border-color: #da3120
+}
+
+.open-num .ball-4[data-v-22faa2f7] {
+    border-color: #c438b4
+}
+
+.open-num .ball-5[data-v-22faa2f7] {
+    border-color: #ed851f
+}
+
+.open-num .ball-6[data-v-22faa2f7] {
+    border-color: #1cac58
+}
+
+.open-num .ball-7[data-v-22faa2f7] {
+    border-color: #a02110
+}
+
+.open-num .ball-8[data-v-22faa2f7] {
+    border-color: #423f44
+}
+
+.open-num .ball-9[data-v-22faa2f7] {
+    border-color: #05a3da
+}
+
+.balls[data-v-273d0e90] {
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important
+}
+
+.balls[data-v-273d0e90],
+.balls li[data-v-273d0e90] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.balls li[data-v-273d0e90] {
+    width: .586667rem;
+    height: .586667rem;
+    line-height: .586667rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: .32rem;
+    color: #fff;
+    background-color: #ccc;
+    position: relative;
+    font-weight: 700;
+    text-shadow: 0 .026667rem #000, .026667rem 0 #000, -.026667rem 0 #000, 0 -.026667rem #000
+}
+
+.balls li[data-v-273d0e90]:first-child,
+.balls li[data-v-273d0e90]:nth-child(2) {
+    margin-right: .8rem
+}
+
+.balls li[data-v-273d0e90]:first-child:after,
+.balls li[data-v-273d0e90]:nth-child(2):after {
+    content: "+";
+    position: absolute;
+    right: -.533333rem;
+    color: #868686;
+    font-size: .48rem;
+    text-shadow: none
+}
+
+.balls li[data-v-273d0e90]:nth-child(3) {
+    margin-right: .8rem
+}
+
+.balls li[data-v-273d0e90]:nth-child(3):after {
+    content: "=";
+    position: absolute;
+    right: -.533333rem;
+    color: #868686;
+    font-size: .48rem;
+    text-shadow: none
+}
+
+.balls li.yellow-ball[data-v-273d0e90] {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ffdf49), to(#ffc12d));
+    background: linear-gradient(#ffdf49 1%, #ffc12d)
+}
+
+.balls li.green-ball[data-v-273d0e90] {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #59e14b), to(#3ac12c));
+    background: linear-gradient(#59e14b 1%, #3ac12c)
+}
+
+.balls li.blue-ball[data-v-273d0e90] {
+    background: -webkit-gradient(linear, left top, left bottom, from(#619cff), to(#0a5eff));
+    background: linear-gradient(#619cff, #0a5eff)
+}
+
+.balls li.red-ball[data-v-273d0e90] {
+    background: linear-gradient(#fa7476, #ee0909)
+}
+
+.balls li.gray[data-v-273d0e90] {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #999), to(#777)) !important;
+    background: linear-gradient(#999 1%, #777) !important
+}
+
+.result-num .balls li[data-v-273d0e90]:first-child:after,
+.result-num .balls li[data-v-273d0e90]:nth-child(2):after,
+.result-num .balls li[data-v-273d0e90]:nth-child(3):after {
+    color: #fff
+}
+
+.vue-countdown-component {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+
+@-webkit-keyframes animate-filp-face {
+    0% {
+        -webkit-transform: rotateX(-.01deg);
+        transform: rotateX(-.01deg);
+        opacity: 1
+    }
+    50% {
+        opacity: 1
+    }
+    51% {
+        opacity: 0
+    }
+    to {
+        -webkit-transform: rotateX(-180deg);
+        transform: rotateX(-180deg);
+        opacity: 0
+    }
+}
+
+@keyframes animate-filp-face {
+    0% {
+        -webkit-transform: rotateX(-.01deg);
+        transform: rotateX(-.01deg);
+        opacity: 1
+    }
+    50% {
+        opacity: 1
+    }
+    51% {
+        opacity: 0
+    }
+    to {
+        -webkit-transform: rotateX(-180deg);
+        transform: rotateX(-180deg);
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes animate-filp-back {
+    0% {
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg)
+    }
+    to {
+        -webkit-transform: rotateX(-.01deg);
+        transform: rotateX(-.01deg)
+    }
+}
+
+@keyframes animate-filp-back {
+    0% {
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg)
+    }
+    to {
+        -webkit-transform: rotateX(-.01deg);
+        transform: rotateX(-.01deg)
+    }
+}
+
+.vue-countdown-component.ie .base .base-b {
+    clip: rect(.4rem, auto, auto, auto)
+}
+
+.vue-countdown-component.ie .face {
+    clip: rect(auto, auto, .4rem, auto)
+}
+
+.vue-countdown-component.ie .back {
+    clip: rect(.4rem, auto, auto, auto)
+}
+
+.vue-countdown-component.theme2 .time-box {
+    min-width: .533333rem
+}
+
+.vue-countdown-component.theme2 .time-box+.time-box {
+    margin-left: .026667rem
+}
+
+.vue-countdown-component.theme3 .time-box {
+    min-width: .533333rem;
+    height: .533333rem;
+    line-height: .533333rem;
+    color: #fff;
+    background-color: transparent;
+    min-width: auto;
+    font-size: .293333rem;
+    padding: 0 .013333rem
+}
+
+.vue-countdown-component.theme3 .time-box+.time-box {
+    margin-left: .013333rem
+}
+
+.vue-countdown-component.theme3 .time-box:after,
+.vue-countdown-component.theme3 .time-box:before {
+    background: transparent
+}
+
+.vue-countdown-component.theme3 .time-box>div.back,
+.vue-countdown-component.theme3 .time-box>div.base .base-b,
+.vue-countdown-component.theme3 .time-box>div.face {
+    background-color: transparent;
+    display: none
+}
+
+.vue-countdown-component.theme3 .time-unit {
+    padding: 0 .026667rem;
+    color: #fff;
+    height: .533333rem;
+    line-height: .48rem
+}
+
+.vue-countdown-component.theme4 .time-box {
+    min-width: .533333rem;
+    background-color: transparent;
+    min-width: auto;
+    height: .693333rem;
+    line-height: .693333rem;
+    font-size: .4rem;
+    color: #333;
+    text-shadow: #fff .026667rem 0 0, #fff 0 .026667rem 0, #fff -.026667rem 0 0, #fff 0 -.026667rem 0;
+    padding: 0 .026667rem
+}
+
+.vue-countdown-component.theme4 .time-box+.time-box {
+    margin-left: .013333rem
+}
+
+.vue-countdown-component.theme4 .time-box:after,
+.vue-countdown-component.theme4 .time-box:before {
+    background: transparent
+}
+
+.vue-countdown-component.theme4 .time-box>div.back,
+.vue-countdown-component.theme4 .time-box>div.face {
+    background-color: transparent;
+    display: none
+}
+
+.vue-countdown-component.theme4 .time-box>div.base {
+    border-radius: .133333rem;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeff2), color-stop(50%, #eeeff2), color-stop(50%, #d8dbe0), to(#d8dbe0));
+    background-image: linear-gradient(180deg, #eeeff2 0, #eeeff2 50%, #d8dbe0 0, #d8dbe0);
+    width: .586667rem
+}
+
+.vue-countdown-component.theme4 .time-box>div.base .base-b {
+    background-color: transparent;
+    display: none
+}
+
+.vue-countdown-component.theme4 .time-unit {
+    font-weight: 700;
+    color: #ff193c;
+    height: .693333rem;
+    line-height: .693333rem
+}
+
+.vue-countdown-component.theme5 .time-box {
+    width: .266667rem !important;
+    min-width: auto;
+    height: .533333rem;
+    text-align: center;
+    line-height: .533333rem;
+    color: #888;
+    background-color: transparent;
+    font-size: .32rem;
+    padding: 0;
+    margin: 0;
+    display: block
+}
+
+.vue-countdown-component.theme5 .time-box+.time-box {
+    margin-left: 0
+}
+
+.vue-countdown-component.theme5 .time-box:after,
+.vue-countdown-component.theme5 .time-box:before {
+    background: transparent;
+    display: none
+}
+
+.vue-countdown-component.theme5 .time-box>div.back,
+.vue-countdown-component.theme5 .time-box>div.base .base-b,
+.vue-countdown-component.theme5 .time-box>div.face {
+    background-color: transparent;
+    display: none
+}
+
+.vue-countdown-component.theme5 .time-unit {
+    padding: 0 !important;
+    width: auto !important;
+    text-align: center;
+    color: #888;
+    height: .533333rem;
+    line-height: .48rem
+}
+
+.vue-countdown-component .time-unit {
+    padding: 0 .106667rem;
+    color: #3293bc;
+    font-size: .4rem;
+    font-weight: 700;
+    line-height: .8rem;
+    white-space: nowrap
+}
+
+.vue-countdown-component .time-box {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: .8rem;
+    min-width: .746667rem;
+    font-size: .373333rem;
+    text-align: center;
+    background-color: #0087b4;
+    -webkit-perspective: 1.6rem;
+    perspective: 1.6rem;
+    border-radius: .08rem;
+    padding: 0 .053333rem;
+    color: #fff;
+    line-height: .8rem
+}
+
+.vue-countdown-component .time-box:before {
+    left: -.026667rem
+}
+
+.vue-countdown-component .time-box:after,
+.vue-countdown-component .time-box:before {
+    content: "";
+    position: absolute;
+    background: #009acd;
+    width: .026667rem;
+    height: .16rem;
+    top: 50%;
+    margin-top: -.08rem;
+    z-index: -1
+}
+
+.vue-countdown-component .time-box:after {
+    right: -.026667rem
+}
+
+.vue-countdown-component .time-box+.time-box {
+    margin-left: .213333rem
+}
+
+.vue-countdown-component .time-box>div {
+    overflow: hidden;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-duration: .4s;
+    animation-duration: .4s;
+    border-radius: .08rem
+}
+
+.vue-countdown-component .time-box>div.base {
+    position: relative
+}
+
+.vue-countdown-component .time-box>div.base .base-b {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 0 0 .08rem .08rem;
+    width: 100%;
+    height: 100%;
+    background-color: #008fbe;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%)
+}
+
+.vue-countdown-component .time-box>div.face {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0087b4;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    z-index: 2
+}
+
+.vue-countdown-component .time-box>div.face.anime {
+    -webkit-animation-name: animate-filp-face;
+    animation-name: animate-filp-face
+}
+
+.vue-countdown-component .time-box>div.back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #008fbe;
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%)
+}
+
+.vue-countdown-component .time-box>div.back.anime {
+    -webkit-animation-name: animate-filp-back;
+    animation-name: animate-filp-back
+}
+
+.vue-countdown-component.less10 .time-box {
+    color: #ff193c !important;
+    text-shadow: #fff .026667rem 0 0, #fff 0 .026667rem 0, #fff -.026667rem 0 0, #fff 0 -.026667rem 0
+}
