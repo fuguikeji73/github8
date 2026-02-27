@@ -1,105 +1,552 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <!-- Safari 标签页图标 -->
-    <link rel="maskicon" href="/favicon.x-icon">
-    <!-- iPhone主屏幕图标 -->
-    <link rel="apple-touch-icon" href="/favicon.x-icon">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <!-- 引入 Swiper CSS -->
-    <title>亚新国际</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="./skin/vue.global.prod.3.4.27.js"></script>
+    <link rel="stylesheet" href="./skin/style.css">
+    <link rel="stylesheet" href="./skin/style_icon.css">
+    <link rel="stylesheet" href="./skin/index.css">
+    <script src="./skin/nutui.umd.4.3.8.js"></script>
+    <title>大富豪</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" href="./skin/lgo.png" type="image/png">
     <style>
-        .swiper {
-            width: 100%;
-            height: 100%;
+        .lang_radio {
+            display: none;
         }
 
-        .swiper-slide {
-            background: url("./img/1h5.png") no-repeat center center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-        }
-
-        .swiper-slide img {
-            width: 100%;
-            height: 100%;
+        .lang_radio_img {
+            vertical-align: unset !important;
+            width: 13px !important;
+            height: 13px !important;
+            margin-top: 0px !important;
+            cursor: pointer;
+            margin-right: 3px !important;
+            margin-top: 4px !important;
+            display: inline;
+            min-height: unset !important;
+            min-width: unset !important;
         }
     </style>
-    <script type="text/javascript">
-        (function(w, d) {
-            function setSize() {
-                var screenWidth = d.documentElement.clientWidth;
-                if (screenWidth > 960) {
-                    screenWidth = 960;
-                }
-                var currentFontSize = (screenWidth * 100) / 750;
-                d.documentElement.style.fontSize = currentFontSize + "px";
+    <style>
+        .marquee-container {
+            width: 100%;
+            /* 根据需要调整宽度 */
+            overflow: hidden;
+            /* 隐藏超出部分 */
+            white-space: nowrap;
+            /* 不换行 */
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .marquee {
+            display: inline-block;
+            padding-left: 10%;
+            /* 开始位置在右侧 */
+            animation: marquee 25s linear infinite;
+            /* 动画效果 */
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+                /* 初始位置 */
             }
-            w.addEventListener("resize", setSize);
-            w.addEventListener("pageShow", setSize);
-            w.addEventListener("DOMContentLoaded", setSize);
-        })(window, document);
-    </script>
+            100% {
+                transform: translateX(-100%);
+                /* 结束位置 */
+            }
+        }
+    </style>
+    <style>
+        .responsive-img {
+            max-width: 100%;
+            /* 最大宽度为100% */
+            height: auto;
+            /* 高度自动调整 */
+        }
+                .download-text {
+    /* 字体加粗，增强视觉效果 */
+    font-weight: bold;
+    /* 背景使用红色渐变 */
+    background: linear-gradient(90deg, #59ff00, #ff2600);
+    /* 将背景裁剪为文字形状 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* 文字颜色设为透明，显示背景渐变 */
+    color: transparent;
+    /* 确保文字正确显示 */
+    display: inline-block;
+}
+
+    </style>
 </head>
 
 <body>
-    <!-- 顶部 -->
-    <div class="home">
-        <div id="topImg" class="home-top"><img style="width:100%;height:100%" src="./img/pctop.png" alt=""></div>
-        <section id="Hcontent" class="home-content">
-            <article id="contTitle" class="title">集团介绍</article>
-            <section id="contbox" class="box" onclick="handleOpenUrl()"><img style="width:100%;cursor: pointer;" src="./img/ust.png" alt=""></section>
-        </section>
-        <div id="list" class="list">
-            <div id="four" class="list-box" onclick="handleWebsite('http://yxgj28.vip/')">
-      <img class="imgs" src="./img/p1.png" alt="">
-      <div class="btns">
-        <img src="./img/pr.png">
-        <img onclick="handleWebsite('https://www.mj98.app/')" src="./img/pd.png">
-      </div>
-    </div>
-        </div>
-        <!-- 底部 -->
-        <div class="footer">
-            <div class="img">
-                <img src="./img/Group 1566.png" alt="footer">
-                <!-- <div></div> -->
+    <div id="app" class="page" data-v-app="">
+        <div class="page-cont">
+            <div class="head-bar">
             </div>
-            <div id="footerBox" class="box"><div class="box-item">
-        <div class="text">多群矩阵同步运营，信赖保证</div>
-        <img class="img" src="./img/1.png" alt="">
-      </div>
-<div class="box-item">
-        <div class="text">客服团队全时在线，问题实时响应</div>
-        <img class="img" src="./img/2.png" alt="">
-      </div>
-<div class="box-item">
-        <div class="text">多样玩法与定期福利活动</div>
-        <img class="img" src="./img/3.png" alt="">
-      </div>
-<div class="box-item">
-        <div class="text">实时数据，公平公正</div>
-        <img class="img" src="./img/4.png" alt="">
-      </div>
-</div>
-            <div class="desc">Copyright © 2026 亚新国际. All Rights Reserved.</div>
+
+            <img src="./skin/lb.png" class="responsive-img">
+
+            <div class="cont-box" style="margin-top: -18px;">
+
+                <div class="notice-bar">
+                    <img class="img" src="./skin/icon1.png">
+                    <div class="msg-bar">
+                        <div class="marquee-container">
+                            <div class="marquee" style="font-size: 17px;color: #D7C09D;">
+                                欢迎来到大富豪，本平台已飞单至官方，请各位老板放心娱乐，有任何问题，请及时联系网页在线客服！
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-box">
+                    <a href="javascript:;">
+              <img src="./skin/03e415ea274147be9de036e938fc0258.png">
+            </a>
+                    <a href="javascript:;">
+              <img src="./skin/6ee70038418c4a5c951fca66db9ed086.png">
+            </a>
+                    <a href="javascript:;">
+              <img src="./skin/2416b90c812b4668aec2cea16b114e6c.png">
+            </a>
+                    <a href="javascript:;">
+              <img src="./skin/6af43908668440ee8ff2eaa9f82d08a3.png">
+            </a>
+                </div>
+                <div class="pay-box">
+                    <img src="./skin/img1.png">
+                                    <div class="pay-box1">
+                                        <a href="https://tronscan.org/#/address/TYX54R5NCyvP11zk1jvLyTE3qQL2RHe6QS">
+              <img src="./images/bg33.png">
+            </a>
+                </div>
+                <div class="app-list">
+
+                    
+                   
+                                        <div class="app-item">
+                        <div class="info-box">
+                            <div class="app-icon">
+                                <img src="./static/upload/image/20250327/1743067814322337.png" alt="">
+                            </div>
+                            <div class="app-info">
+                                <div class="top-info">
+                                    <div class="info">
+                                        <div class="name">
+                                            BV APP
+                                        </div>
+                                        
+                                        <div class="link">
+                                                                                    <div class="name">
+                                            房间:728882
+                                        </div>
+                                            <a href="javascript:;">
+                          
+                        </a>
+                                            <a href="javascript:;">
+                          
+                        </a>
+                                        </div>
+                                    </div>
+                                    <a class="active" href="fl.html">
+                      <img src="./skin/img2.gif" alt="">
+                    </a>
+                                </div>
+                                <div class="label-list">
+                                    <a href="javascript:;" class="label">
+                      澳洲5/10
+                    </a>
+                                    <a href="javascript:;" class="label">
+                      极速赛车
+                    </a>
+                                    <a href="javascript:;" class="label">
+                      极速飞艇
+                    </a>
+                                    <a href="javascript:;" class="label">
+                      极速时时彩
+                    </a>
+                                    <a href="javascript:;" class="label">
+                      重庆时时彩
+                    </a>
+                                    <a href="javascript:;" class="label">
+                      幸运飞艇
+                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-box">
+                            <a class="btn" href="index.html#" id="link22">
+                  <img src="./skin/icon6.png">
+                  <span class="download-text">
+                    下载APP
+                  </span>
+                </a>
+                            <a class="btn" href="index.html#" id="kefu22">
+                  <img src="./skin/icon7.png">
+                  <span>
+                    在线客服
+                  </span>
+                </a>
+                        </div>
+                    </div>
+                    <div id="aaa22" style="display: none;">
+                        <view class="nut-overlay" style="transition-duration: 0.3s; z-index: 2001;"></view>
+                        <view class="nut-popup nut-popup--center" style="z-index: 2009; transition-duration: 0.3s;">
+                            <div class="dailog-popup download">
+                                <div class="close" id="guanbi22"></div>
+                                <div class="title"></div>
+                                <div class="line"></div>
+                                <div class="btn-list"><a class="btn" href="https://bv02.cc/bvpg1xz.html"><img src="./images/icon9.png" alt=""><span>  BV苹果官方下载</span></a><a class="btn" href="tzbvxz.html"><img src="./images/icon10.png" alt=""><span>  BV安卓官方下载</span></a><a class="btn" href="https://xinshengaim.com/"><img src="./images/icon10.png" alt=""><span>  BV通用H5登录</span></a>
+                                   </div>
+                            </div>
+                        </view>
+                    </div>
+                    <script>
+                        const link22 = document.getElementById('link22');
+                        const aaa22 = document.getElementById('aaa22');
+                        link22.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            aaa22.style.display = 'block';
+                        });
+                        const closeButton22 = document.getElementById('guanbi22');
+                        const content22 = document.getElementById('aaa22');
+                        closeButton22.addEventListener('click', function() {
+                            content22.style.display = 'none';
+                        });
+                    </script>
+                    <div id="kefudiv22" style="display: none;">
+                        <view class="nut-overlay" style="transition-duration: 0.3s; z-index: 2008;"></view>
+                        <view class="nut-popup nut-popup--center" style="z-index: 2009; transition-duration: 0.3s;">
+                            <div class="dailog-popup kf" style="background: url(skin/bg4s.png) 0% 0% / 100% 100% no-repeat; position: relative;">
+                                <div class="close" id="guanbib22"></div>
+                                <div class="title"></div>
+                                <div class="line"></div>
+                                <div class="kf-list"><a class="kf-item" href="https://tawk.to/chat/69084da1b7a1df194d9fabcb/1j946ug9k" target="_blank"><img class="icon1" src="./skin/0544aa35b27947c89122b31183d19d04.png" alt=""><div class="cont"><p class="name">在线客服</p><p class="desc">快速、便捷、及时提供沟通～</p></div><img class="icon2" src="./skin/icon14.png" alt=""></a>
+                                    <a
+                                        class="kf-item" href="javascript:;"><img class="icon1" src="./skin/2a33227e485644ec9c723710b4847416.png" alt="">
+                                        <div class="cont">
+                                            <p class="name">微信：</p>
+                                            <p class="desc">一对一沟通高效解决问题～</p>
+                                        </div><img class="icon2" src="./skin/icon15.png"></a>
+                                </div>
+                            </div>
+                        </view>
+                    </div>
+                    <script>
+                        const kefu22 = document.getElementById('kefu22');
+                        const kefudiv22 = document.getElementById('kefudiv22');
+                        kefu22.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            kefudiv22.style.display = 'block';
+                        });
+                        const closeButtona22 = document.getElementById('guanbib22');
+                        const contenta22 = document.getElementById('kefudiv22');
+                        closeButtona22.addEventListener('click', function() {
+                            contenta22.style.display = 'none';
+                        });
+                    </script>
+                    <div class="app-item">
+                        <div class="info-box">
+                            <div class="app-icon">
+                                <img src="./static/upload/image/20250327/17430652447927361.png" alt="">
+                            </div>
+                            <div class="app-info">
+                                <div class="top-info">
+                                    <div class="info">
+                                        <div class="name">
+                                            大富豪计划网
+                                        </div>
+                                        <div class="link">
+                                            <a href="javascript:;">
+                          
+                        </a>
+                                            <a href="javascript:;">
+                          
+                        </a>
+                                        </div>
+                                    </div>
+                                    <a class="active" href="fl.html">
+                      <img src="./skin/img2.gif" alt="">
+                    </a>
+                                </div>
+                                <div class="label-list">
+                                    <a href="javascript:;" class="label">
+                      澳洲5/10
+                    </a>
+                                    <a href="javascript:;" class="label">
+                      极速赛车
+                    </a>
+                                    <a href="javascript:;" class="label">
+                      极速飞艇
+                    </a>
+                                    <a href="javascript:;" class="label">
+                      极速时时彩
+                    </a>
+                                    <a href="javascript:;" class="label">
+                      重庆时时彩
+                    </a>
+                                    <a href="javascript:;" class="label">
+                      幸运飞艇
+                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-box">
+                            <a class="btn" href="index.html#" id="link24">
+                  <img src="./skin/icon6.png">
+                  <span class="download-text">
+                    进入计划网
+                  </span>
+                </a>
+                            <a class="btn" href="index.html#" id="kefu24">
+                  <img src="./skin/icon7.png">
+                  <span>
+                    在线客服
+                  </span>
+                </a>
+                        </div>
+                    </div>
+                    <div id="aaa24" style="display: none;">
+                        <view class="nut-overlay" style="transition-duration: 0.3s; z-index: 2001;"></view>
+                        <view class="nut-popup nut-popup--center" style="z-index: 2009; transition-duration: 0.3s;">
+                            <div class="dailog-popup download">
+                                <div class="close" id="guanbi24"></div>
+                                <div class="title"></div>
+                                <div class="line"></div>
+                                <div class="btn-list"><a class="btn" href="https://1689437.com/"><img src="./images/icon9.png" alt=""><span>  168 开奖网苹果官方下载</span></a><a class="btn" href="https://1689437.com/"><img src="./images/icon10.png" alt=""><span>  168 开奖网安卓官方下载</span></a>
+                                    </div>
+                            </div>
+                        </view>
+                    </div>
+                    <script>
+                        const link24 = document.getElementById('link24');
+                        if (link24) {
+                            link24.addEventListener('click', function(event) {
+                                event.preventDefault();
+                                // 跳转到百度
+                                window.location.href = 'jh.html';
+                            });
+                        }
+                    </script>
+                    <div id="kefudiv24" style="display: none;">
+                        <view class="nut-overlay" style="transition-duration: 0.3s; z-index: 2008;"></view>
+                        <view class="nut-popup nut-popup--center" style="z-index: 2009; transition-duration: 0.3s;">
+                            <div class="dailog-popup kf" style="background: url(skin/bg4s.png) 0% 0% / 100% 100% no-repeat; position: relative;">
+                                <div class="close" id="guanbib24"></div>
+                                <div class="title"></div>
+                                <div class="line"></div>
+                                <div class="kf-list"><a class="kf-item" href="https://tawk.to/chat/693186bb5e697c197ed8f538/1jbknck4i" target="_blank"><img class="icon1" src="./skin/0544aa35b27947c89122b31183d19d04.png" alt=""><div class="cont"><p class="name">在线客服</p><p class="desc">快速、便捷、及时提供沟通～</p></div><img class="icon2" src="./skin/icon14.png" alt=""></a>
+                                    <a
+                                        class="kf-item" href="javascript:;"><img class="icon1" src="./skin/2a33227e485644ec9c723710b4847416.png" alt="">
+                                        <div class="cont">
+                                            <p class="name">微信：</p>
+                                            <p class="desc">一对一沟通高效解决问题～</p>
+                                        </div><img class="icon2" src="./skin/icon15.png"></a>
+                                </div>
+                            </div>
+                        </view>
+                    </div>
+                    <script>
+                        const kefu24 = document.getElementById('kefu24');
+                        const kefudiv24 = document.getElementById('kefudiv24');
+                        kefu24.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            kefudiv24.style.display = 'block';
+                        });
+                        const closeButtona24 = document.getElementById('guanbib24');
+                        const contenta24 = document.getElementById('kefudiv24');
+                        closeButtona24.addEventListener('click', function() {
+                            contenta24.style.display = 'none';
+                        });
+                    </script>
+                    
+                    <div class="app-item">
+                        <div class="info-box">
+                            <div class="app-icon">
+                                <img src="./static/upload/image/20250327/1743067973965241.png" alt="">
+                            </div>
+                            <div class="app-info">
+                                <div class="top-info">
+                                    <div class="info">
+                                        <div class="name">
+                                            168 开奖网
+                                        </div>
+                                        <div class="link">
+                                            <a href="javascript:;">
+                          
+                        </a>
+                                            <a href="javascript:;">
+                          
+                        </a>
+                                        </div>
+                                    </div>
+                                    <a class="active" href="fl.html">
+                      <img src="./skin/img2.gif" alt="">
+                    </a>
+                                </div>
+                                <div class="label-list">
+                                    <a href="javascript:;" class="label">
+                      澳洲5/10
+                    </a>
+                                    <a href="javascript:;" class="label">
+                      极速赛车
+                    </a>
+                                    <a href="javascript:;" class="label">
+                      极速飞艇
+                    </a>
+                                    <a href="javascript:;" class="label">
+                      极速时时彩
+                    </a>
+                                    <a href="javascript:;" class="label">
+                      重庆时时彩
+                    </a>
+                                    <a href="javascript:;" class="label">
+                      幸运飞艇
+                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-box">
+                            <a class="btn" href="index.html#" id="link23">
+                  <img src="./skin/icon6.png">
+                  <span class="download-text">
+                    进入168开奖网
+                  </span>
+                </a>
+                            <a class="btn" href="index.html#" id="kefu23">
+                  <img src="./skin/icon7.png">
+                  <span>
+                    在线客服
+                  </span>
+                </a>
+                        </div>
+                    </div>
+                    <div id="aaa23" style="display: none;">
+                        <view class="nut-overlay" style="transition-duration: 0.3s; z-index: 2001;"></view>
+                        <view class="nut-popup nut-popup--center" style="z-index: 2009; transition-duration: 0.3s;">
+                            <div class="dailog-popup download">
+                                <div class="close" id="guanbi23"></div>
+                                <div class="title"></div>
+                                <div class="line"></div>
+                                <div class="btn-list"><a class="btn" href="https://1689437.com/"><img src="./images/icon9.png" alt=""><span>  168 开奖网苹果官方下载</span></a><a class="btn" href="https://1689437.com/"><img src="./images/icon10.png" alt=""><span>  168 开奖网安卓官方下载</span></a>
+                                   </div>
+                            </div>
+                        </view>
+                    </div>
+                    <script>
+                        const link23 = document.getElementById('link23');
+                        if (link23) {
+                            link23.addEventListener('click', function(event) {
+                                event.preventDefault();
+                                // 跳转到百度
+                                window.location.href = 'https://1689437.com/';
+                            });
+                        }
+                    </script>
+                    <div id="kefudiv23" style="display: none;">
+                        <view class="nut-overlay" style="transition-duration: 0.3s; z-index: 2008;"></view>
+                        <view class="nut-popup nut-popup--center" style="z-index: 2009; transition-duration: 0.3s;">
+                            <div class="dailog-popup kf" style="background: url(skin/bg4s.png) 0% 0% / 100% 100% no-repeat; position: relative;">
+                                <div class="close" id="guanbib23"></div>
+                                <div class="title"></div>
+                                <div class="line"></div>
+                                <div class="kf-list"><a class="kf-item" href="https://tawk.to/chat/69084da1b7a1df194d9fabcb/1j946ug9k" target="_blank"><img class="icon1" src="./skin/0544aa35b27947c89122b31183d19d04.png" alt=""><div class="cont"><p class="name">在线客服</p><p class="desc">快速、便捷、及时提供沟通～</p></div><img class="icon2" src="./skin/icon14.png" alt=""></a>
+                                    <a
+                                        class="kf-item" href="javascript:;"><img class="icon1" src="./skin/2a33227e485644ec9c723710b4847416.png" alt="">
+                                        <div class="cont">
+                                            <p class="name">微信：</p>
+                                            <p class="desc">一对一沟通高效解决问题～</p>
+                                        </div><img class="icon2" src="./skin/icon15.png"></a>
+                                </div>
+                            </div>
+                        </view>
+                    </div>
+                    <script>
+                        const kefu23 = document.getElementById('kefu23');
+                        const kefudiv23 = document.getElementById('kefudiv23');
+                        kefu23.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            kefudiv23.style.display = 'block';
+                        });
+                        const closeButtona23 = document.getElementById('guanbib23');
+                        const contenta23 = document.getElementById('kefudiv23');
+                        closeButtona23.addEventListener('click', function() {
+                            contenta23.style.display = 'none';
+                        });
+                    </script>
+                    
+
+                </div>
+            </div>
+        </div>
+        <div class="course-dialog show" id="dialog" style="display: none;">
+            <div id="dialogBg" class="bg"></div>
+            <div id="dialogCentera" class="center">
+                <div class="line"></div>
+                <div class="imgModel" id="iosImg">
+                    <div class="teachTitle">二维码保存长期访问</div><img src="./skin/djewm.jpg"></div>
+            </div>
+        </div>
+        <div class="course-dialog show" id="dialogAn" style="display: none;">
+            <div id="dialogBg" class="bg"></div>
+            <div id="dialogCenter" class="center">
+                <div class="line"></div>
+                <div class="imgModel" id="iosImg">
+                    <div class="teachTitle">安卓安装教程</div><img src="./skin/f360cbbdcbd44c33947db87fcad1b210.png"></div>
+            </div>
         </div>
     </div>
+    <script>
+        const showContentLinks = document.querySelectorAll('[id^="apppg"]');
+        const anzhuo = document.querySelectorAll('[id^="anzhuo"]');
+        const dialog = document.getElementById('dialog');
+        const dialogAn = document.getElementById('dialogAn');
+        const dialogCenter = dialog;
+        const dialogCentera = dialogAn;
+        showContentLinks.forEach(showContentLink => {
+            showContentLink.addEventListener('click', function(event) {
+                event.stopPropagation();
+                dialog.style.display = 'block';
+            });
+        });
 
+        anzhuo.forEach(showContentLink => {
+            showContentLink.addEventListener('click', function(event) {
+                event.stopPropagation();
+                dialogAn.style.display = 'block';
+            });
+        });
 
+        document.addEventListener('click', function() {
+            dialog.style.display = 'none';
+            dialogAn.style.display = 'none';
 
-    <script type="text/javascript" src="./js/index.js"></script>
-
-<div id="topImg" class="home-top"><img style="width:100%;height:100%" src="./img/yj.jpg" alt=""></div>
-
+        });
+    </script>
+    <script src="./skin/jquery-2.1.1.min.js"></script>
+</body>
 <style>
+    /* 基础样式重置 */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        background: url('') no-repeat center center fixed;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+        font-family: Arial, "Microsoft Yahei", sans-serif;
+    }
 
     /* 右上角链接容器 */
     .top-links {
@@ -115,8 +562,8 @@
     /* 右下角客服链接 - 已修改为固定定位并垂直居中 */
     .bottom-link {
         position: fixed;
-        top: 80%;
-        right: 10px;
+        top: 50%;
+        right: 20px;
         transform: translateY(-50%);
         animation: float 2s ease-in-out infinite;
         z-index: 1000; /* 确保图标在所有元素上方 */
@@ -130,7 +577,7 @@
     }
 
     .image-link img {
-        width: 50px;
+        width: 150px;
         height: auto;
         border-radius: 8px;
     }
@@ -161,7 +608,7 @@
             right: 10px;
         }
         .bottom-link img {
-            width: 60px !important;
+            width: 100px !important;
         }
     }
 
@@ -171,13 +618,9 @@
         }
     }
 </style>
-    <script src="./skin/jquery-2.1.1.min.js"></script>
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"93b76891fde991b3","version":"2025.4.0-1-g37f21b1","r":1,"token":"5a58923ea5924829b6a8f22fe963063a","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}'
-        crossorigin="anonymous"></script>
-    <!-- 右下角客服链接 -->
-    <a href="https://tawk.to/chat/697b2c56f774291c39949c1b/1jg4iacvu" class="image-link bottom-link" target="_blank">
-            <img src="./img/Group 1627.png" alt="在线客服" style="width: 150px;">
-        </a>
-</body>
 
+<!-- 右下角客服链接 - 移除内联样式，统一由CSS控制 -->
+<a href="https://tawk.to/chat/69084da1b7a1df194d9fabcb/1j946ug9k" class="image-link bottom-link" target="_blank">
+    <img src="./images/kefu.png" alt="在线客服！">
+</a>
 </html>

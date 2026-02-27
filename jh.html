@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=screen-orientation content=portrait>
+    <meta name=full-screen content=yes>
+    <meta name=HandheldFriendly content=true>
+    <meta name=browsermode content=application>
+    <meta name=x5-fullscreen content=true>
+    <meta name=x5-orientation content=portrait>
+    <meta name=x5-page-mode content=app>
+    <meta name=MobileOptimized content=320>
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+    <meta name=apple-mobile-web-app-title content=大富豪>
+    <meta name=apple-touch-fullscreen content=yes>
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=apple-mobile-web-app-status-bar-style content=black>
+    <meta name=format-detection content="telephone=no">
+    <style>
+        html,
+        body,
+        #app {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #app {
+            visibility: hidden;
+        }
+
+        .loading-mask {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading-box {
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .loading-box img {
+            width: 80px;
+        }
+
+        .loading-box span {
+            font-size: 14px;
+        }
+
+        @keyframes ldio {
+            0% {
+                transform: translate(6px, 40px) scale(0);
+            }
+            25% {
+                transform: translate(6px, 40px) scale(0);
+            }
+            50% {
+                transform: translate(6px, 40px) scale(1);
+            }
+            75% {
+                transform: translate(40px, 40px) scale(1);
+            }
+            100% {
+                transform: translate(74px, 40px) scale(1);
+            }
+        }
+
+        @keyframes ldio-r {
+            0% {
+                transform: translate(74px, 40px) scale(1);
+            }
+            100% {
+                transform: translate(74px, 40px) scale(0);
+            }
+        }
+
+        @keyframes ldio-c {
+            0% {
+                background: #e15b64
+            }
+            25% {
+                background: #abbd81
+            }
+            50% {
+                background: #f8b26a
+            }
+            75% {
+                background: #f47e60
+            }
+            100% {
+                background: #e15b64
+            }
+        }
+
+        .ldio div {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            transform: translate(40px, 40px) scale(1);
+            background: #e15b64;
+            animation: ldio 3.7037037037037033s infinite cubic-bezier(0, 0.5, 0.5, 1);
+        }
+
+        .ldio div:nth-child(1) {
+            background: #f47e60;
+            transform: translate(74px, 40px) scale(1);
+            animation: ldio-r 0.9259259259259258s infinite cubic-bezier(0, 0.5, 0.5, 1), ldio-c 3.7037037037037033s infinite step-start;
+        }
+
+        .ldio div:nth-child(2) {
+            animation-delay: -0.9259259259259258s;
+            background: #e15b64;
+        }
+
+        .ldio div:nth-child(3) {
+            animation-delay: -1.8518518518518516s;
+            background: #f47e60;
+        }
+
+        .ldio div:nth-child(4) {
+            animation-delay: -2.7777777777777777s;
+            background: #f8b26a;
+        }
+
+        .ldio div:nth-child(5) {
+            animation-delay: -3.7037037037037033s;
+            background: #abbd81;
+        }
+
+        .loadingio-spinner-ellipsis {
+            width: 80px;
+            height: 80px;
+            display: inline-block;
+            overflow: hidden;
+            background: none;
+        }
+
+        .ldio {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform: translateZ(0) scale(0.8);
+            backface-visibility: hidden;
+            transform-origin: 0 0;
+        }
+
+        .ldio div {
+            box-sizing: content-box;
+        }
+    </style>
+    <script>
+        window["document"]["write"]('<div class="loading-mask"><div class="loading-box"><div class="loadingio-spinner-ellipsis"><div class="ldio"><div></div><div></div><div></div><div></div><div></div></div></div><span>正在加载中...</span></div></div>');
+    </script>
+    <meta content="email=no" name=format-detection>
+    <link rel=icon href=static/favicon/ts.ico>
+    <link rel=stylesheet href="static/css/base.css?v=20200218171745">
+    <script src="static/js/axios.js?v=20200218171745"></script>
+    <script src="static/js/vue.js?v=20200218171745"></script>
+    <script src="static/js/vue-router.js?v=20200218171745"></script>
+    <script src="static/js/vuex.js?v=20200218171745"></script>
+    <script src="static/js/vant.js?v=20200218171745"></script>
+    <script src="static/js/vue-lazyload.js?v=20200218171745"></script>
+    <title>大富豪导航页：yx90</title>
+    <link href=static/css/chunk-13497520.a402c36a.css rel=prefetch>
+    <link href=static/css/chunk-2a64d08d.3a1afc11.css rel=prefetch>
+    <link href=static/css/chunk-4be6a838.0924e456.css rel=prefetch>
+    <link href=static/css/chunk-9f917292.db9c1cfa.css rel=prefetch>
+    <link href=static/css/chunk-a5b8ff70.2b3e2fb8.css rel=prefetch>
+    <link href=static/css/chunk-a89f1c0c.4182457d.css rel=prefetch>
+    <link href=static/css/chunk-f7a1b7f2.efbbba43.css rel=prefetch>
+    <link href=static/js/chunk-13497520.04b3fd5b.js rel=prefetch>
+    <link href=static/js/chunk-2a64d08d.20ee8497.js rel=prefetch>
+    <link href=static/js/chunk-4be6a838.99661d4a.js rel=prefetch>
+    <link href=static/js/chunk-9f917292.9f5c94bd.js rel=prefetch>
+    <link href=static/js/chunk-a5b8ff70.6addce92.js rel=prefetch>
+    <link href=static/js/chunk-a89f1c0c.529f4d47.js rel=prefetch>
+    <link href=static/js/chunk-f7a1b7f2.28f5decd.js rel=prefetch>
+    <link href=static/css/app.8c4ed0bc.css rel=preload as=style>
+    <link href=static/css/chunk-libs.7319bd72.css rel=preload as=style>
+    <link href=static/js/app.62ae8cad.js rel=preload as=script>
+    <link href=static/js/chunk-libs.cc32effd.js rel=preload as=script>
+    <link href=static/css/chunk-libs.7319bd72.css rel=stylesheet>
+    <link href=static/css/app.8c4ed0bc.css rel=stylesheet>
+</head>
+
+<body class=skin_blue id=mainBody><noscript><strong>请开启JavaScript功能.</strong></noscript>
+    <div id=app></div>
+    <script src=static/js/chunk-libs.cc32effd.js></script>
+    <script src=static/js/app.62ae8cad.js></script>
+</body>
+<script>
+    // window.onload = function() {
+    setTimeout(function() {
+        document.querySelector('#app').style.visibility = 'visible';
+        document.querySelector('.loading-mask').style.display = 'none';
+    }, 200)
+// 第一步：定义替换规则 + 需移除的目标属性（可扩展多个）
+const replaceRules = [
+    { old: '鼎盛', new: '大富豪' },
+    { old: 'https://www.dingsheng28.com', new: 'https://www.yx90.cc' },
+    { old: '此计划为普通计划。请联系在线客服申请进高级VIP群。', new: '一路长红' },
+    { old: '平安', new: '喜乐' },
+    { old: '大富豪计划专注于彩票大数据、热门彩种，智能计划数据分析、百名专家精准助力推荐; 下载网址：https://www.dsjh.xyz', new: '大富豪导航页：yx90.cc' }
+];
+// 需移除的目标属性（支持多个，如[data-v-4b256fd6]、[data-v-xxx]）
+const removeAttrs = ['data-v-4b256fd6','id="autoplay"','data-v-37e6ffea','class="sm"']; 
+
+
+// 第二步：核心处理函数（文本+链接+删coIcon类+删alt属性+移除指定属性元素）
+function batchProcessAll() {
+    // ========== 1. 优先移除含指定属性的整个元素（核心新增） ==========
+    removeAttrs.forEach(targetAttr => {
+        // 匹配所有含该属性的元素（#app容器内）
+        const targetElements = document.getElementById('app').querySelectorAll(`[${targetAttr}]`);
+        targetElements.forEach(element => {
+            // 移除整个元素（从DOM树中删除）
+            element.remove();
+            console.log(`已移除含${targetAttr}的元素：`, element);
+        });
+    });
+
+    // ========== 2. 处理文本节点（原有逻辑） ==========
+    const textWalker = document.createTreeWalker(
+        document.getElementById('app'),
+        NodeFilter.SHOW_TEXT,
+        {
+            acceptNode: function(node) {
+                const parentTag = node.parentElement.tagName.toLowerCase();
+                if (['script', 'style', 'textarea', 'input', 'select'].includes(parentTag)) {
+                    return NodeFilter.FILTER_SKIP;
+                }
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        }
+    );
+
+    let textNode;
+    while (textNode = textWalker.nextNode()) {
+        let text = textNode.textContent;
+        let isTextChanged = false;
+        replaceRules.forEach(rule => {
+            if (text.includes(rule.old)) {
+                const reg = new RegExp(rule.old, 'gi');
+                text = text.replace(reg, rule.new);
+                isTextChanged = true;
+            }
+        });
+        if (isTextChanged) {
+            textNode.textContent = text;
+        }
+    }
+
+    // ========== 3. 处理链接/跳转属性（原有逻辑） ==========
+    const linkAttributes = ['href', 'action', 'onclick', 'onload', 'src', 'data-href', 'link'];
+    const allElements = document.getElementById('app').querySelectorAll('*');
+    
+    allElements.forEach(element => {
+        // 3.1 处理链接替换
+        linkAttributes.forEach(attr => {
+            if (element.hasAttribute(attr)) {
+                let attrValue = element.getAttribute(attr);
+                let isLinkChanged = false;
+                replaceRules.forEach(rule => {
+                    if (attrValue.includes(rule.old)) {
+                        const reg = new RegExp(rule.old, 'gi');
+                        attrValue = attrValue.replace(reg, rule.new);
+                        isLinkChanged = true;
+                    }
+                });
+                if (isLinkChanged) {
+                    element.setAttribute(attr, attrValue);
+                }
+            }
+        });
+
+        // 3.2 删除coIcon类（原有逻辑）
+        if (element.classList.contains('coIcon')) {
+            element.classList.remove('coIcon');
+            console.log('已删除coIcon类：', element);
+        }
+                if (element.classList.contains('right-icon')) {
+            element.classList.remove('right-icon');
+            console.log('已删除coIcon类：', element);
+        }
+                        if (element.classList.contains('gold')) {
+            element.classList.remove('gold');
+            console.log('已删除coIcon类：', element);
+        }
+        
+
+
+        // 3.3 删除alt="onLineServer"属性（原有逻辑）
+        if (element.hasAttribute('alt') && element.getAttribute('alt') === 'onLineServer') {
+            element.removeAttribute('alt');
+            console.log('已删除alt="onLineServer"属性：', element);
+        }
+    });
+}
+
+// 第三步：初始化执行
+batchProcessAll();
+
+// 第四步：监听DOM变化（防抖+覆盖动态新增元素）
+const observer = new MutationObserver((mutations) => {
+    clearTimeout(observer.timer);
+    observer.timer = setTimeout(() => {
+        batchProcessAll();
+    }, 100);
+});
+
+// 配置监听规则（新增attributes监听，覆盖属性新增场景）
+observer.observe(document.getElementById('app'), {
+    childList: true,        // 监听子节点新增/删除
+    subtree: true,          // 监听所有后代节点
+    characterData: true,    // 监听文本内容变化
+    attributes: true,       // 监听属性变化（含data-v-xxx、class、alt等）
+    attributeFilter: ['class', 'alt', 'href', 'action', 'onclick', ...removeAttrs] // 包含需移除的属性
+});
+
+// 可选：停止监听
+// function stopProcess() {
+//     observer.disconnect();
+//     clearTimeout(observer.timer);
+// }
+</script>
+<script>
+    var _hmt = _hmt || [];
+    var site_id = "";
+    if (location.hostname.indexOf("168jh.net") != -1) {
+        site_id = "21918017";
+    } else if (location.hostname.indexOf("168jh.co") != -1) {
+        site_id = "21918091";
+    } else if (location.hostname.indexOf("168jh.xyz") != -1) {
+        site_id = "21918097";
+    } else if (location.hostname.indexOf("dsjh.app") != -1) {
+        site_id = "21974289";
+    }
+    if (site_id) {
+        setTimeout(() => {
+            (function() {
+                var hm1 = document.createElement("script");
+                hm1.src = "//js.users.51.la/" + site_id + ".js";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm1, s);
+            })();
+        }, 200)
+    }
+</script>
+
+</html>
